@@ -44,12 +44,13 @@ test('changes body background when theme button clicked', () => {
   expect(appHeaderEls.length).toBeGreaterThan(0);
   const appHeaderEl = appHeaderEls[0] as HTMLElement; 
 
-   // default before theme applied
+  // default dark theme before theme applied
+  expect(appHeaderEl.style.color).toBe("#ffffff");
   expect(appHeaderEl.style.backgroundColor).toBe('#282c34');
 
-  const darkBtn = screen.getByRole('button', { name: 'light' });
-  expect(darkBtn).toBeTruthy();
-  fireEvent.click(darkBtn);
+  const lightBtn = screen.getByRole('button', { name: 'light' });
+  expect(lightBtn).toBeTruthy();
+  fireEvent.click(lightBtn);
   
   // ThemeProvider sets inline body style bg for immediate effect
   
