@@ -4,6 +4,7 @@ import "./App.css";
 import { useLanguage } from "./contexts/languageContext";
 import { useTheme } from "./contexts/themeContext";
 import { useTranslation, Trans } from "react-i18next";
+import { Helmet } from 'react-helmet';
 import i18n from "./i18n";
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
@@ -28,6 +29,9 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+	<link rel="stylesheet" href="/themes/${theme}.css" />
+      </Helmet>
       <header className="App-header">
         <Image src={logo} className="App-logo" alt="logo" />
         <Button onClick={advanceToNextLanguage}>{language}</Button>
