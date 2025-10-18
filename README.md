@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Example React App With Contexts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and then contexts were added.
+So far there is a session context, a theme context and a language context.  All for demonstration purpose and perhaps as a template one or myself can fork and have something that is more or less started with these contexts already integrated.
 
 ## Available Scripts
 
